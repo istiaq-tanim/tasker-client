@@ -13,10 +13,8 @@ const DeleteTask = ({ id }) => {
             const result = await response.json()
             if (result.success) {
                   toast.success(result.message)
-                  router.refresh()
+                  router.refresh(router.asPath)
             }
-
-
       }
       return (
             <button onClick={() => handleDelete(id)} className="text-red-500">Delete</button>
