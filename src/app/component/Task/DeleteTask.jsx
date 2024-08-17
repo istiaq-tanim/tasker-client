@@ -13,7 +13,7 @@ const DeleteTask = ({ id }) => {
             const result = await response.json()
             if (result.success) {
                   toast.success(result.message)
-                  router.refresh(router.asPath)
+                  router.push("/")
             }
       }
       return (
