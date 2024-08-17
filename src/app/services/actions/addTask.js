@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 
 export const addTask = async (task) => {
-      const response = await fetch("http://localhost:5000/tasks", {
+      const response = await fetch("https://todo-server-ashen.vercel.app/tasks", {
             method: "POST",
             headers: {
                   'Content-Type': 'application/json',

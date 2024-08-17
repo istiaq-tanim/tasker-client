@@ -2,7 +2,7 @@ import EditTask from "@/app/component/Task/EditTask";
 
 const EditPage = async ({ params }) => {
       const { id } = params
-      const response = await fetch(`http://localhost:5000/tasks/${id}`)
+      const response = await fetch(`https://todo-server-ashen.vercel.app/tasks/${id}`)
       const { task } = await response.json()
       return (
 

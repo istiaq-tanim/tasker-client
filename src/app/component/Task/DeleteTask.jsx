@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 const DeleteTask = ({ id }) => {
       const router = useRouter()
       const handleDelete = async (id) => {
-            const response = await fetch(`http://localhost:5000/tasks/${id}`, {
+            const response = await fetch(`https://todo-server-ashen.vercel.app/tasks/${id}`, {
                   method: "DELETE"
             })
             const result = await response.json()
