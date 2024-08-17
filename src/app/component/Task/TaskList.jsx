@@ -23,6 +23,10 @@ const TaskList = () => {
       useEffect(() => {
             fetchTasks(searchTerm);
       }, [searchTerm]);
+
+      const handleTaskDeleted = () => {
+            fetchTasks(searchTerm);
+      };
       return (
 
 
@@ -38,7 +42,7 @@ const TaskList = () => {
                         </thead>
                         <tbody>
                               {
-                                    tasks?.map(task => <SingleTask key={task._id} task={task}></SingleTask>)
+                                    tasks?.map(task => <SingleTask key={task._id} onDelete={handleTaskDeleted} task={task}></SingleTask>)
                               }
                         </tbody>
                   </table>

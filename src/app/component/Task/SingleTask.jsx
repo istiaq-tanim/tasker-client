@@ -1,7 +1,7 @@
 import Link from "next/link";
 import DeleteTask from "./DeleteTask";
 
-const SingleTask = ({ task }) => {
+const SingleTask = ({ task, onDelete }) => {
       return (
             <tr className="border-b border-[#2E3443] [&>td]:align-baseline [&>td]:px-4 [&>td]:py-2">
                   <td className="text-center">{task?.title}</td>
@@ -13,7 +13,7 @@ const SingleTask = ({ task }) => {
                   <td className="text-center">{task?.priority}</td>
                   <td>
                         <div className="flex items-center justify-center space-x-3">
-                              <DeleteTask id={task._id}></DeleteTask>
+                              <DeleteTask id={task._id} onDelete={onDelete}></DeleteTask>
                               <Link href={`/editTask/${task._id}`}><button className="text-blue-500">Edit</button></Link>
 
                         </div>
